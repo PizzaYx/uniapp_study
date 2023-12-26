@@ -3,23 +3,37 @@
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
+		
 		</view>
+		
+			<button @click="handleClick"> 点击 </button>
+		<view v-for="item in list" :key="item.name">
+			<text>{{item.name}}</text>
+			<text>{{item.num}}</text>
+		</view>
+		
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
+<script setup>
+	import {ref,reactive} from 'vue'
+	import {onLoad} from '@dcloudio/uni-app'
+	const title = ref('Hello')
+	
+	const list = reactive([
+		{name:'111',num:1},
+		{name:'222',num:2},
+		{name:'333',num:3},
+	])
+	
+	onLoad(() => {
+		console.log('onLoad生命周期1');
+	})
+	
+	const handleClick = ()=>{
+		list.forEach(item=>{
+			item.num++
+		})
 	}
 </script>
 
