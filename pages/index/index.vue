@@ -1,66 +1,45 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		
+	<view>
+		<navbar :isHome="true" />
+		<view style="margin-top: 130rpx;">
+			<view class="weui-cell" style="background: #fff9eb;">
+				<view class="weui-cell__hd">
+					<image src="../../static/resource/images/ic_myapp.png"
+						style="display: block;width: 40rpx;height: 40rpx;margin-right: 14rpx;"></image>
+				</view>
+				<view class="weui-cell__bd">
+					<text style="color: #be9719;font-size: 13px;">点击右上角"添加到我的小程序"，方便下次找到!</text>
+				</view>
+				<view class="weui-cell__ft">
+					<image src="../../static/resource/images/modal_closer.png"
+						style="display: block;width: 15px;height: 15px;"></image>
+				</view>
+
+			</view>
 		</view>
-		
-			<button @click="handleClick"> 点击 </button>
-		<view v-for="item in list" :key="item.name">
-			<text>{{item.name}}</text>
-			<text>{{item.num}}</text>
-		</view>
-		
 	</view>
 </template>
 
 <script setup>
-	import {ref,reactive} from 'vue'
-	import {onLoad} from '@dcloudio/uni-app'
-	const title = ref('Hello')
-	
-	const list = reactive([
-		{name:'111',num:1},
-		{name:'222',num:2},
-		{name:'333',num:3},
-	])
-	
+	import { ref, reactive, computed } from 'vue'
+	import { onLoad } from '@dcloudio/uni-app'
+
 	onLoad(() => {
-		console.log('onLoad生命周期1');
+		console.log(app.globalData);
 	})
-	
-	const handleClick = ()=>{
-		list.forEach(item=>{
-			item.num++
+	const data = ref('动态数据')
+	const changeData = (val) => {
+		data.value = val
+	}
+
+	const app = getApp()
+	const navigatorTo = () => {
+		uni.navigateTo({
+			url: '/pages/search/index'
 		})
 	}
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+	page {}
 </style>
