@@ -27,6 +27,18 @@
 				</block>
 			</swiper>
 		</view>
+		
+		<view v-if="nav2s && nav2s.length > 0" class="nav2-list">
+			<block v-for="(item,index) in nav2s" :key="index"> 
+			<view class="nav2-item" :data-index="index">
+				<view class="nav2-pic">
+					<image :src="item.pic_image_url" mode="widthFix"></image>
+					
+				</view>
+				
+			</view>
+			</block>
+		</view>
 	</view>
 </template>
 
@@ -38,6 +50,9 @@
 
 	//定义轮播图数据
 	const slides = ref([])
+	
+	//快捷入口2
+	const nav2s = ref([])
 
 	onLoad(() => {
 		app.globalData.utils.getUserInfo()
@@ -55,6 +70,7 @@
 					success: ({ data }) => {
 						console.log(data);
 						slides.value = data.slides
+						nav2s.value = data.nav2s
 					}
 				})
 			}
@@ -82,5 +98,36 @@
 	.index-swiper swiper-item image {
 		width: 100%;
 		height: 100%;
+	}
+	
+	.nav2-list{
+		margin: 10rpx 20rpx 0 20rpx;
+	}
+	
+	.nav2-list::after{
+		content: '';
+		display: block;
+		height: 0;
+		line-height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	
+	.nav2-item{
+		float: left;
+		margin-top: 20rpx;
+		width: 50%;
+		text-align: center;
+		box-sizing: border-box;
+		padding: 0 5rpx;
+	}
+	
+	.nav2-pic{
+		width: 100%;
+	}
+	
+	.nav2-pic image{
+		display: block;
+		width: 100%;
 	}
 </style>
