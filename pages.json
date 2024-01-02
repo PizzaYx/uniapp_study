@@ -27,6 +27,20 @@
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/hospital/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/index",
+			"style": {
+				"navigationBarTitleText": "填写服务订单",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 

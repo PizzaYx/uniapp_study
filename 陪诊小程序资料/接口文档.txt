@@ -1,0 +1,11 @@
+登录接口 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706
+首页地区和初始化信息接口：https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-127450682
+地区医院信息：https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-127463122
+城市列表 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-127793889
+用户信息接口 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-127802068
+服务列表 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-130967234
+服务对象列表 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-132974650
+创建订单接口 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-135175418
+获取验证码 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-135433085
+验证码验证 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-135433824
+订单列表 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-136365856

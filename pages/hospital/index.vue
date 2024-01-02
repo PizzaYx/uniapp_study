@@ -1,10 +1,10 @@
 <template>
 	<view>
-
+		医院
 	</view>
 </template>
 
-<script setup>
+<script>
 
 </script>
 
