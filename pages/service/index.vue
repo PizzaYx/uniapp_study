@@ -51,15 +51,29 @@
 							<view class="weui-label">
 								就诊医院
 							</view>
-							<view class="weui-cell__bd"></view>
+							<view class="weui-cell__bd">
+								<view class="weui-cell__ft weui-cell__ft_in-access">
+									<view>
+										<picker @change="onHospitalChange" :value="hospital_index" :range="hospitals"
+											range-key="name">
+											<input type="text" :disabled="true" placeholder="请选择要就诊的医院"
+												:value="hospitals[hospital_index].name"
+												placeholder-class="vp-placeholder" />
+										</picker>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="weui-cell weui-cell_input">
+						<view class="weui-cell__hd">
+							<view class="weui-label">就诊时间</view>
+						</view>
+						<view class="weui-cell__bd">
 							<view class="weui-cell__ft weui-cell__ft_in-access">
 								<view>
-									<picker @change="onHospitalChange" :value="hospital_index" :range="hospitals"
-										range-key="name">
-										<input type="text" :disabled="true" placeholder="请选择要就诊的医院"
-											:value="hospitals[hospital_index].name"
-											placeholder-class="vp-placeholder" />
-									</picker>
+									<dtPicker @dtPickerChanged="onStartTimeChanged" :timestamp="order.starttime"
+										placeholder="请选择就诊时间"></dtPicker>
 								</view>
 							</view>
 						</view>
@@ -76,7 +90,6 @@
 	import { ref, reactive, computed, toRaw } from 'vue'
 	import { onLoad } from '@dcloudio/uni-app'
 	const app = getApp()
-
 
 	onLoad((options) => {
 		console.log(options);
@@ -112,7 +125,7 @@
 				//默认选中
 				const hospitalsData = toRaw(hospitals.value)
 				if (options.hid > 0) {
-					//自动旋转
+					//自动选中
 					for (let i = 0; i < hospitalsData.length; i++) {
 						if (hospitalsData[i].id == options.hid) {
 							hospital_index.value = i
@@ -137,8 +150,13 @@
 		hospital_index.value = value
 		order.price = toRaw(hospitals.value)[value].service_price
 	}
+
+	//修改日期后的回调
+	const onStartTimeChanged = (e) => {
+		order.starttimer = e.detail.value
+	}
 </script>
 
 <style>
-	@import './index.css'
+	@import './index.css';
 </style>

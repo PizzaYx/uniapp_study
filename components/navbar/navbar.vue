@@ -48,15 +48,15 @@
 		},
 		fontSize: {
 			type: String,
-			default: 32
+			default: '32'
 		},
 		iconWidth: {
 			type: String,
-			default: 116
+			default: '116'
 		},
 		iconHeight: {
 			type: String,
-			default: 38
+			default: '38'
 		},
 		titleText: {
 			type: String,

@@ -1,6 +1,7 @@
 <template>
 	<view>
-		<picker mode="multiSelector" @change="doChange" @columnchange="doColumnChange" :value="self_value" :range="self_range">
+		<picker mode="multiSelector" @change="doChange" @columnchange="doColumnChange" :value="self_value"
+			:range="self_range">
 			<input :disabled="true" placeholder-style="color:#bbbbbb" :placeholder="placeholder" :value="value_text" />
 		</picker>
 	</view>
@@ -30,6 +31,7 @@
 			default: ''
 		}
 	})
+
 	const emit = defineEmits(['dtPickerChanged'])
 	// 当前时间
 	const now = new Date().getTime()
@@ -56,7 +58,8 @@
 				text += ' （后天）';
 			}
 			days_text.push(text);
-			const hours = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14',
+			const hours = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13',
+				'14',
 				'15', '16', '17', '18', '19', '20', '21', '22', '23'
 			];
 			const seconds = [
@@ -212,7 +215,7 @@
 			return day + ' ' + hour + ':' + second;
 		}
 	}
-	console.log(props, 'props')
+
 	watch(props.timestamp, (nd) => {
 		timestampChange(nd)
 	}, { immediate: true })
