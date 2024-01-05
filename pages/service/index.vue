@@ -48,9 +48,7 @@
 				<view class="pub-box-bd">
 					<view class="weui-cell weui-cell_input">
 						<view class="weui-cell__hd">
-							<view class="weui-label">
-								就诊医院
-							</view>
+							<view class="weui-label">就诊医院</view>
 							<view class="weui-cell__bd">
 								<view class="weui-cell__ft weui-cell__ft_in-access">
 									<view>
