@@ -41,6 +41,14 @@
 				"navigationBarTitleText": "填写服务订单",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path" : "pages/clients/index",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 
