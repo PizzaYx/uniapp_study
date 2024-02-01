@@ -9,3 +9,4 @@
 获取验证码 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-135433085
 验证码验证 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-135433824
 订单列表 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-136365856
+订单详情 https://apifox.com/apidoc/shared-50a14ca5-c1d1-47ca-99f0-315ecfa52706/api-145596428

@@ -36,7 +36,7 @@ page {
 .od-banner-icon {
 	position: absolute;
 	top: 30rpx;
-	right: 5rpx;
+	right: -20rpx;
 	width: 130rpx;
 	opacity: 0.6;
 }
