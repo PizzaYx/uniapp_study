@@ -33,7 +33,9 @@ class Utils {
 		if (option.showLoading) {
 			this.showLoading()
 		}
-
+		//发送请求
+		console.log(option.method, 'option.method')
+		console.log(option.url, 'option.url')
 		uni.request({
 			url: this.baseUrl + option.url,
 			data: option.data ? option.data : {},
